@@ -1,0 +1,17 @@
+@@ -53,10 +56,16 @@
+ static Drw *drw;
+ static Clr *scheme[SchemeLast];
+ 
++static int useargb = 0;
++static Visual *visual;
++static int depth;
++static Colormap cmap;
++
+ #include "config.h"
+ 
+ static int (*fstrncmp)(const char *, const char *, size_t) = strncmp;
+ static char *(*fstrstr)(const char *, const char *) = strstr;
++static void xinitvisual();
+ 
+ static void
+ appenditem(struct item *item, struct item **list, struct item **last)
