@@ -1,0 +1,3 @@
+# Ignore all .o files and dmenu executable
+*.o
+dmenu
